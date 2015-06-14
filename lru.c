@@ -44,6 +44,17 @@ int oldlru(int f[ ])
     return j; 
 } 
 
+
+
+
+
+
+
+
+
+
+
+
 int main() 
 { 
     int list[N]; //程序的访页地址流
@@ -61,6 +72,8 @@ int main()
         printf("%3d", list[i]); 
     }
     printf("\n---------------------------------------------------\n");
+
+/*******************************************************************************/
     // LRU置换算法 
     printf("\nLRU:\n"); 
     absent = 0; 
@@ -68,8 +81,8 @@ int main()
         buf[i] = f[i] = -1; 
     for(i = 0; i < N; i++) 
     { 
-        j = isInBuf(buf, list[i],&absent); 
-        old = oldlru(f); 
+        j = isInBuf(buf, list[i],&absent); ////////////////////////////
+        old = oldlru(f); //？
         if(j== -1) //需置换页面
     	{ 
             change[i]=buf[old]; 
@@ -81,7 +94,9 @@ int main()
             f[j]=0; 
             change[i]=-1; 
     	}
- 
+
+
+ /*******************************************************************************/
         //保存当前内存页面情况
         for(k=0;k<B; k++)   
                 result[k][i]=buf[k];
