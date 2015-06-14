@@ -97,7 +97,7 @@ int main()
             
             
             
-                        change[i]=buf[old];
+                        change[i]=buf[old];// old返回下次使用距离现在最久的页面位置?
                 buf[old] = list[i]; 
             } 
             else 
