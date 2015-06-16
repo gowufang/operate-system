@@ -82,14 +82,14 @@ int main()
 			result[k][i]=buf[k];
 			
 			printf("%4d",result[k][i]);//每次置换后就将本次页面输出	
-			Sleep(500);//buf[]中的数据依次输出
+			//Sleep(500);//buf[]中的数据依次输出
 		}
 		
 		printf("\n");
 	} 
 	
 	printf("\n\n%d个页面的序号：\n",N);
-	for (i = 1; i < N; i++)//页面序号
+	for (i = 1; i <= N; i++)//页面序号
     {
         printf("%3d", i); 
     }
